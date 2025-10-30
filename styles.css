@@ -1,0 +1,351 @@
+:root {
+  --gold: #d4af37;
+}
+
+/* ---------------- VARIABLES Y UTILIDADES ---------------- */
+.text-gold {
+  color: var(--gold);
+}
+
+.bg-gold {
+  background-color: var(--gold);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ---------------- NAVBAR ---------------- */
+
+/* Tipografía adicional */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&display=swap');
+
+/* Enlaces principales */
+.nav-link {
+  color: #f5f5f5;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--gold);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--gold);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Enlaces móviles */
+#mobile-menu a {
+  letter-spacing: 1px;
+}
+
+.mobile-link {
+  color: #ddd;
+  transition: all 0.3s ease;
+}
+
+.mobile-link:hover {
+  color: var(--gold);
+  letter-spacing: 2px;
+}
+
+#mobile-menu {
+  transition: all 0.4s ease-in-out;
+}
+
+/* Animación hamburguesa */
+#menu-btn.active .menu-icon:nth-child(1) {
+  transform: rotate(45deg) translateY(6px);
+}
+
+#menu-btn.active .menu-icon:nth-child(2) {
+  opacity: 0;
+}
+
+#menu-btn.active .menu-icon:nth-child(3) {
+  transform: rotate(-45deg) translateY(-6px);
+}
+
+/* ---------------- HERO ---------------- */
+#messi video {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+#messi video:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 40px rgba(212, 175, 55, 0.4);
+}
+
+/* ---------------- PRODUCTOS ---------------- */
+#productos h2 {
+  letter-spacing: 1px;
+}
+
+/* === ANIMACIÓN PREMIUM DORADA === */
+.product-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  background: linear-gradient(to bottom, rgba(25, 25, 25, 0.9), rgba(0, 0, 0, 0.9));
+  transition: all 0.4s ease;
+  box-shadow: 0 0 5px rgba(212, 175, 55, 0.15);
+  cursor: pointer;
+}
+
+/* Efecto hover y toque (mobile/desktop) */
+.product-card:hover,
+.product-card:active {
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.35);
+}
+
+/* Brillo dorado dinámico */
+.product-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(212, 175, 55, 0.3),
+    transparent
+  );
+  transform: rotate(45deg);
+  transition: all 0.8s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.product-card:hover::before,
+.product-card:active::before {
+  opacity: 1;
+  animation: shine 1.6s linear infinite;
+}
+
+/* Animación del reflejo */
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) rotate(45deg);
+  }
+  50% {
+    transform: translateX(0) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) rotate(45deg);
+  }
+}
+
+/* Imagen */
+.product-card img {
+  transition: transform 0.6s ease;
+}
+
+.product-card:hover img,
+.product-card:active img {
+  transform: scale(1.08);
+}
+
+/* Título con brillo dorado suave */
+.product-card h3 {
+  position: relative;
+  transition: text-shadow 0.5s ease;
+}
+
+.product-card:hover h3,
+.product-card:active h3 {
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.6), 0 0 20px rgba(212, 175, 55, 0.4);
+}
+
+/* En mobile: luz sutil permanente */
+@media (max-width: 768px) {
+  .product-card {
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.25);
+  }
+}
+
+/* ---------------- MARCAS ---------------- */
+.brand-logo {
+  width: 140px;
+  object-fit: contain;
+  filter: grayscale(100%) brightness(0.9);
+  opacity: 0.9;
+  transition: all 0.35s ease;
+}
+
+.brand-logo:hover {
+  filter: grayscale(0%) brightness(1.2);
+  transform: scale(1.08);
+  opacity: 1;
+}
+
+/* ---------------- CONTACTO ---------------- */
+.contact-card {
+  background-color: #111;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  width: 270px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.05);
+}
+
+.contact-card:hover {
+  background-color: #181818;
+  transform: translateY(-5px);
+  border-color: var(--gold);
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.3);
+}
+
+/* ---------------- SWEETALERT2 CUSTOM STYLE ---------------- */
+.swal2-popup {
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.25);
+  border-radius: 14px;
+}
+.swal2-title {
+  color: #d4af37 !important;
+  font-family: 'Playfair Display', serif !important;
+}
+.swal2-confirm {
+  background-color: #d4af37 !important;
+  color: #000 !important;
+  border-radius: 8px !important;
+  padding: 8px 25px !important;
+  font-weight: 600 !important;
+  font-family: 'Poppins', sans-serif !important;
+}
+.swal2-html-container {
+  font-family: 'Poppins', sans-serif !important;
+}
+
+/* ---------------- HERO VIDEO RESPONSIVE FIX ---------------- */
+#inicio video {
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  #inicio video {
+    object-fit: contain;
+    object-position: center top;
+    background-color: #000;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+/* ---------------- ESPACIADO ENTRE HERO Y SIGUIENTE SECCIÓN ---------------- */
+@media (max-width: 768px) {
+  #inicio {
+    height: 95vh;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  #messi {
+    padding-top: 0rem !important;
+  }
+}
+
+/* ---------------- DIVISORES ENTRE SECCIONES ---------------- */
+section + section {
+  position: relative;
+}
+
+section + section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(212, 175, 55, 0.6),
+    transparent
+  );
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+  border-radius: 50%;
+  animation: goldGlow 5s infinite ease-in-out;
+}
+
+@keyframes goldGlow {
+  0% {
+    opacity: 0.7;
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
+  }
+  100% {
+    opacity: 0.7;
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+  }
+}
+
+/* ---------------- DIVISORES PROFESIONALES ENTRE SECCIONES CLAVE ---------------- */
+#productos::after,
+#contacto::after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 70%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(212, 175, 55, 0.8),
+    rgba(255, 239, 190, 0.9),
+    rgba(212, 175, 55, 0.8),
+    transparent
+  );
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+  border-radius: 50%;
+  position: relative;
+  top: 80px;
+  animation: goldenFlow 5s ease-in-out infinite;
+}
+
+@keyframes goldenFlow {
+  0% {
+    filter: brightness(0.9);
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+  }
+  50% {
+    filter: brightness(1.2);
+    box-shadow: 0 0 25px rgba(255, 239, 190, 0.6);
+  }
+  100% {
+    filter: brightness(0.9);
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+  }
+}
+
+@media (max-width: 768px) {
+  #productos::after,
+  #contacto::after {
+    width: 85%;
+    top: 60px;
+  }
+}

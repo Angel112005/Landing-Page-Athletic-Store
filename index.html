@@ -1,0 +1,524 @@
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+        name="description"
+        content="Athletic Store - Calzado deportivo de las mejores marcas: Nike, Adidas, Puma, New Balance y más."
+        />
+        <title>Athletic Store | Wearing Winners</title>
+
+        <!-- Tipografías profesionales -->
+        <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&family=Cinzel:wght@500;600;700&display=swap"
+        rel="stylesheet"
+        />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        
+        <link rel="icon" type="image/png" href="assets/logo-athletic-wbkg.png" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+
+    <body class="bg-black text-white font-[Poppins]">
+
+
+
+<!-- NAVBAR -->
+<header
+  class="fixed w-full bg-black/85 backdrop-blur-md z-50 border-b-[1.5px] border-transparent shadow-[0_2px_15px_rgba(212,175,55,0.15)] transition-all duration-300"
+  style="border-image: linear-gradient(to right, transparent, rgba(212,175,55,0.8), transparent) 1;"
+>
+  <nav class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+    <!-- Logo -->
+    <div class="flex items-center space-x-3">
+      <img
+        src="assets/logo-athletic-wbkg.png"
+        alt="Logo Athletic Store"
+        class="w-14 h-14 rounded-md shadow-md"
+      />
+      <h1
+        class="text-xl md:text-2xl font-[Cinzel] tracking-[4px] text-gold font-semibold select-none"
+      >
+        ATHLETIC STORE
+      </h1>
+    </div>
+
+    <!-- Links Desktop -->
+    <ul
+      class="hidden md:flex space-x-8 text-[15px] uppercase font-[Poppins] tracking-[1px]"
+    >
+      <li><a href="#inicio" class="nav-link relative">Inicio</a></li>
+      <li><a href="#productos" class="nav-link relative">Productos</a></li>
+      <li><a href="#marcas" class="nav-link relative">Marcas</a></li>
+      <li><a href="#contacto" class="nav-link relative">Contacto</a></li>
+    </ul>
+
+    <!-- Botón Hamburguesa -->
+    <button
+      id="menu-btn"
+      class="block md:hidden focus:outline-none relative z-50 w-8 h-8 flex flex-col justify-between items-center"
+    >
+      <span
+        class="menu-icon block w-7 h-[2px] bg-gold rounded transition-all duration-300 origin-center"
+      ></span>
+      <span
+        class="menu-icon block w-7 h-[2px] bg-gold rounded transition-all duration-300 origin-center"
+      ></span>
+      <span
+        class="menu-icon block w-7 h-[2px] bg-gold rounded transition-all duration-300 origin-center"
+      ></span>
+    </button>
+  </nav>
+
+  <!-- Menú Móvil -->
+  <div
+    id="mobile-menu"
+    class="hidden md:hidden flex-col items-center bg-black/95 border-t border-gold/20 py-6 space-y-5 text-lg font-[Poppins] uppercase tracking-widest"
+  >
+    <a href="#inicio" class="mobile-link">Inicio</a>
+    <a href="#productos" class="mobile-link">Productos</a>
+    <a href="#marcas" class="mobile-link">Marcas</a>
+    <a href="#contacto" class="mobile-link">Contacto</a>
+  </div>
+</header>
+
+
+        <!-- HERO -->
+        <section
+        id="inicio"
+        class="relative h-screen flex items-center justify-start overflow-hidden"
+        >
+        <video
+            autoplay
+            muted
+            loop
+            playsinline
+            class="absolute inset-0 w-full h-full object-cover opacity-50 pt-20"
+        >
+            <source
+            src="assets/Athletic_Store_Animado.mp4"
+            type="video/mp4"
+            />
+        </video>
+
+            <div class="relative z-10 max-w-xl px-10 md:px-20 text-left">
+            <h2
+                class="font-[Playfair Display] text-6xl md:text-8xl font-bold text-gold mb-4 drop-shadow-lg leading-tight"
+            >
+                Tu búsqueda termina acá.
+            </h2>
+            <p class="text-gray-200 mb-6 text-lg md:text-xl">
+                No vendemos productos, creamos experiencias deportivas únicas.
+            </p>
+            <a
+                href="#productos"
+                id="btnCatalogo"
+                class="bg-gold text-black font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-yellow-500 hover:scale-105 transition"
+            >
+                Ver catálogo
+            </a>
+            </div>
+
+        </section>
+
+
+
+        <!-- VIDEO PROMOCIONAL MESSI -->
+        <section
+        id="messi"
+        class="relative py-24 bg-gradient-to-b from-black via-gray-900 to-black text-center overflow-hidden"
+        >
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-gold mb-6">Inspirado por los Mejores</h2>
+            <p class="text-gray-300 mb-10 text-lg">
+            La velocidad, la precisión y el estilo se unen en la nueva colección
+            inspirada en Lionel Messi.  
+            Descubre el poder detrás de cada paso.
+            </p>
+
+            <div
+            class="relative w-full max-w-4xl mx-auto aspect-video rounded-xl overflow-hidden shadow-[0_0_30px_rgba(212,175,55,0.3)]"
+            >
+            <video autoplay muted loop playsinline controls class="w-full h-full object-cover">
+                <source
+                src="assets/adidas_nemeziz.mp4"
+                type="video/mp4"
+                />
+                Tu navegador no soporta video HTML5.
+            </video>
+            </div>
+        </div>
+        </section>
+
+
+
+        <!-- PRODUCTOS -->
+        <section id="productos" class="py-24 bg-black">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2
+            class="text-4xl font-[Playfair Display] font-bold text-gold mb-14 tracking-wide"
+            >
+            Modelos Destacados
+            </h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+            <!-- Adidas Ultraboost -->
+            <div class="product-card">
+                <img
+                src="assets/products/Ultraboost.jpg"
+                alt="Adidas Ultraboost"
+                class="w-full h-72 object-cover rounded-t-2xl"
+                />
+                <div class="p-5 text-left relative z-10">
+                <h3
+                    class="text-[20px] font-[Playfair Display] text-gold mb-2 tracking-wide"
+                >
+                    Adidas Ultraboost 5x
+                </h3>
+                <p class="text-gray-300 text-sm font-[Poppins] leading-relaxed">
+                    Comodidad avanzada, ajuste perfecto y tecnología diseñada para ofrecer máximo impulso en cada movimiento deportivo.
+                </p>
+                </div>
+            </div>
+
+            <!-- Adidas F50 Rojo -->
+            <div class="product-card">
+                <img
+                src="assets/products/F5O-red.jpg"
+                alt="Adidas F50 Rojo"
+                class="w-full h-72 object-cover rounded-t-2xl"
+                />
+                <div class="p-5 text-left relative z-10">
+                <h3
+                    class="text-[20px] font-[Playfair Display] text-gold mb-2 tracking-wide"
+                >
+                    Adidas F50+
+                </h3>
+                <p class="text-gray-300 text-sm font-[Poppins] leading-relaxed">
+                    Potencia, ligereza y control absoluto. Diseñados para velocidad explosiva y un rendimiento profesional en cada jugada.
+                </p>
+                </div>
+            </div>
+
+            <!-- Calcetas Antiderrapantes -->
+            <div class="product-card">
+                <img
+                src="assets/products/CalcetasBlancas.jpg"
+                alt="Antiderrapantes Blancas"
+                class="w-full h-72 object-cover rounded-t-2xl"
+                />
+                <div class="p-5 text-left relative z-10">
+                <h3
+                    class="text-[20px] font-[Playfair Display] text-gold mb-2 tracking-wide"
+                >
+                    Antiderrapantes Blancas
+                </h3>
+                <p class="text-gray-300 text-sm font-[Poppins] leading-relaxed">
+                    Sujeción estable, confort duradero y tejido transpirable. Ideales para entrenamientos intensos y máximo control del pie.
+                </p>
+                </div>
+            </div>
+
+            <!-- Espinilleras Nike -->
+            <div class="product-card">
+                <img
+                src="assets/products/EspinillerasMoradas.jpg"
+                alt="Espinilleras Nike Mercurial"
+                class="w-full h-72 object-cover rounded-t-2xl"
+                />
+                <div class="p-5 text-left relative z-10">
+                <h3
+                    class="text-[20px] font-[Playfair Display] text-gold mb-2 tracking-wide"
+                >
+                    Espinilleras Nike Mercurial
+                </h3>
+                <p class="text-gray-300 text-sm font-[Poppins] leading-relaxed">
+                    Protección ligera, materiales resistentes y diseño ergonómico. Creadas para brindar confianza, seguridad y estilo único.
+                </p>
+                </div>
+            </div>
+
+            </div>
+        </div>
+        </section>
+
+
+
+
+        <!-- MARCAS -->
+        <section
+        id="marcas"
+        class="py-24 bg-gradient-to-b from-black via-gray-950 to-black text-center  border-gold/20"
+        >
+        <div class="max-w-6xl mx-auto px-6">
+            <h2
+            class="text-4xl font-[Playfair Display] font-bold text-gold mb-14 tracking-wide"
+            >
+            Nuestras Marcas
+            </h2>
+
+            <div
+            class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-10 place-items-center"
+            >
+            <img
+                src="assets/logos/nike-logo.png"
+                alt="Nike"
+                class="brand-logo w-36 grayscale hover:grayscale-0 transition-all duration-300 hover:scale-105"
+            />
+            <img
+                src="assets/logos/Adidas-Logo.png"
+                alt="Adidas"
+                class="brand-logo w-36 grayscale hover:grayscale-0 transition-all duration-300 hover:scale-105"
+            />
+            <img
+                src="assets/logos/Puma-logo.png"
+                alt="Puma"
+                class="brand-logo w-36 grayscale hover:grayscale-0 transition-all duration-300 hover:scale-105"
+            />
+            <img
+                src="assets/logos/new-balance-logo.png"
+                alt="New Balance"
+                class="brand-logo w-36 grayscale hover:grayscale-0 transition-all duration-300 hover:scale-105"
+            />
+            </div>
+
+            <p
+            class="text-gray-400 text-sm md:text-base mt-10 max-w-2xl mx-auto leading-relaxed"
+            >
+            Trabajamos solo con las mejores marcas deportivas del mundo,
+            garantizando calidad, rendimiento y estilo en cada producto.
+            </p>
+        </div>
+        </section>
+
+
+
+        <!-- CONSULTA PERSONALIZADA -->
+        <section id="consulta" class="py-20 bg-gradient-to-b from-black via-gray-950 to-black text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-[Playfair Display] text-gold font-bold mb-6">
+            ¿No encuentras tu marca o modelo favorito?
+            </h2>
+            <p class="text-gray-300 text-lg md:text-xl leading-relaxed mb-8">
+            Si buscas un artículo en específico o una marca que aún no ves disponible, 
+            <span class="text-gold font-semibold">contáctanos directamente por DM</span> en Instagram.
+            Nuestro equipo te ayudará a encontrarlo o cotizarlo al instante.
+            </p>
+
+            <a 
+            href="https://www.instagram.com/ac_athletic_store/" 
+            target="_blank"
+            class="inline-flex items-center gap-3 bg-gold text-black font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-yellow-500 hover:scale-105 transition-all duration-300"
+            >
+            <img 
+                src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" 
+                alt="Instagram" 
+                class="w-6 h-6"
+            />
+            Enviar mensaje por Instagram
+            </a>
+        </div>
+        </section>
+
+
+
+
+
+<!-- REFERENCIAS -->
+<section id="referencias" class="py-24 bg-gradient-to-b from-black via-gray-950 to-black text-center">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-4xl font-[Playfair Display] font-bold text-gold mb-14 tracking-wide">
+      Opiniones de Nuestros Clientes
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <!-- Testimonio 1 -->
+      <div class="bg-gray-900/70 border border-gold/20 rounded-2xl p-6 backdrop-blur-sm hover:shadow-[0_0_25px_rgba(212,175,55,0.25)] transition-all duration-500">
+        <p class="text-gray-300 italic mb-4">
+          “Pedí unos Adidas Ultraboost y llegaron rápido. La atención fue excelente y los tenis son comodísimos. Sin duda volvería a comprar.”
+        </p>
+        <div class="text-gold font-semibold">— Luis M.</div>
+        <div class="text-gray-400 text-sm">Tuxtla Gutiérrez, Chiapas</div>
+      </div>
+
+      <!-- Testimonio 2 -->
+      <div class="bg-gray-900/70 border border-gold/20 rounded-2xl p-6 backdrop-blur-sm hover:shadow-[0_0_25px_rgba(212,175,55,0.25)] transition-all duration-500">
+        <p class="text-gray-300 italic mb-4">
+          “Compré unas espinilleras Nike. Todo llegó en tiempo y forma, con excelente empaque. Muy buena comunicación en todo momento.”
+        </p>
+        <div class="text-gold font-semibold">— Ana P.</div>
+        <div class="text-gray-400 text-sm">Monterrey, Nuevo León</div>
+      </div>
+
+      <!-- Testimonio 3 -->
+      <div class="bg-gray-900/70 border border-gold/20 rounded-2xl p-6 backdrop-blur-sm hover:shadow-[0_0_25px_rgba(212,175,55,0.25)] transition-all duration-500">
+        <p class="text-gray-300 italic mb-4">
+          “Excelente servicio. Me apoyaron a elegir talla y modelo, y los New Balance que pedí están increíbles. Todo muy profesional.”
+        </p>
+        <div class="text-gold font-semibold">— Carlos F.</div>
+        <div class="text-gray-400 text-sm">Campeche, México</div>
+      </div>
+    </div>
+
+    <p class="text-gray-400 text-sm md:text-base mt-10 max-w-2xl mx-auto leading-relaxed">
+      Cada compra en <span class="text-gold font-semibold">Athletic Store</span> es una experiencia de confianza, 
+      atención personalizada y calidad garantizada.
+    </p>
+  </div>
+</section>
+
+
+        <!-- CONTACTO -->
+        <section id="contacto" class="py-24 bg-black text-center">
+        <h2 class="text-4xl font-bold text-gold mb-10">Contáctanos</h2>
+        <p class="text-gray-400 mb-12 max-w-xl mx-auto">
+            Síguenos en nuestras redes sociales o escríbenos directamente por correo
+            electrónico.  
+            Mantente al día con las últimas colecciones y promociones exclusivas.
+        </p>
+
+        <div
+            class="flex flex-col md:flex-row flex-wrap justify-center items-center gap-10 px-4"
+        >
+            <!-- Instagram -->
+            <a
+            href="https://www.instagram.com/ac_athletic_store/"
+            target="_blank"
+            class="contact-card"
+            >
+            <div class="flex flex-col items-center">
+                <img
+                src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png"
+                alt="Instagram"
+                class="w-10 h-10 mb-2 mx-auto"
+                />
+                <span class="font-medium">@ac_athletic_store</span>
+                <p class="text-sm text-gray-400">Síguenos en Instagram</p>
+            </div>
+            </a>
+
+            <!-- Facebook -->
+            <a
+            href="https://www.facebook.com/profile.php?id=61565835671730"
+            target="_blank"
+            class="contact-card"
+            >
+            <div class="flex flex-col items-center">
+                <img
+                src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
+                alt="Facebook"
+                class="w-10 h-10 mb-2 mx-auto"
+                />
+                <span class="font-medium">Athletic Store</span>
+                <p class="text-sm text-gray-400">Visítanos en Facebook</p>
+            </div>
+            </a>
+
+            <!-- TikTok -->
+            <a
+            href="https://www.tiktok.com/@ac_athletic_store?_t=ZS-90yuggnTVoK&_r=1"
+            target="_blank"
+            class="contact-card"
+            >
+            <div class="flex flex-col items-center">
+                <img
+                src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png"
+                alt="TikTok"
+                class="w-10 h-10 mb-2 mx-auto"
+                />
+                <span class="font-medium">@ac_athletic_store</span>
+                <p class="text-sm text-gray-400">Síguenos en TikTok</p>
+            </div>
+            </a>
+
+            <!-- Correo -->
+            <a href="mailto:athleticstore9922@gmail.com" class="contact-card">
+            <div class="flex flex-col items-center">
+                <img
+                src="https://cdn-icons-png.flaticon.com/512/732/732200.png"
+                alt="Correo"
+                class="w-10 h-10 mb-2 mx-auto"
+                />
+                <span class="font-medium">athleticstore9922@gmail.com</span>
+                <p class="text-sm text-gray-400">Envíanos un mensaje</p>
+            </div>
+            </a>
+        </div>
+        </section>
+
+<!-- FOOTER -->
+<footer class="relative bg-gradient-to-b from-gray-950 via-black to-gray-950 text-gray-400 border-gold/20">
+  <div class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-3 gap-12">
+
+    <!-- Columna 1: Logo y ubicación -->
+    <div class="flex flex-col items-center md:items-start text-center md:text-left">
+      <div class="flex items-center space-x-3 mb-4">
+        <img src="assets/logo-athletic-wbkg.png" alt="Logo Athletic Store" class="w-12 h-12 rounded-md shadow-md" />
+        <h2 class="text-2xl font-[Cinzel] text-gold tracking-[3px] font-semibold">
+          ATHLETIC STORE
+        </h2>
+      </div>
+      <p class="text-sm leading-relaxed max-w-sm">
+        Ubicados en <span class="text-gold font-medium">Tuxtla Gutiérrez, Chiapas</span>, México.<br />
+        Zona poniente de la ciudad — servicio en toda la República.
+      </p>
+      <p class="text-gray-500 text-xs mt-3">Lunes a Sábado | 9:00 a 19:00 hrs</p>
+    </div>
+
+    <!-- Columna 2: Enlaces -->
+    <div class="flex flex-col items-center">
+      <h3 class="text-gold font-semibold mb-4 text-lg font-[Playfair Display]">Enlaces Rápidos</h3>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#inicio" class="hover:text-gold transition">Inicio</a></li>
+        <li><a href="#productos" class="hover:text-gold transition">Productos</a></li>
+        <li><a href="#marcas" class="hover:text-gold transition">Marcas</a></li>
+        <li><a href="#referencias" class="hover:text-gold transition">Opiniones</a></li>
+        <li><a href="#contacto" class="hover:text-gold transition">Contacto</a></li>
+      </ul>
+    </div>
+
+    <!-- Columna 3: Redes sociales -->
+    <div class="flex flex-col items-center md:items-end text-center md:text-right">
+      <h3 class="text-gold font-semibold mb-4 text-lg font-[Playfair Display]">Conéctate con Nosotros</h3>
+      <div class="flex space-x-5 mb-4">
+        <a href="https://www.instagram.com/ac_athletic_store/" target="_blank" class="hover:scale-110 transition">
+          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram" class="w-7 h-7" />
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61565835671730" target="_blank" class="hover:scale-110 transition">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" class="w-7 h-7" />
+        </a>
+        <a href="https://www.tiktok.com/@ac_athletic_store?_t=ZS-90yuggnTVoK&_r=1" target="_blank" class="hover:scale-110 transition">
+          <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok" class="w-7 h-7" />
+        </a>
+        <a href="mailto:athleticstore9922@gmail.com" class="hover:scale-110 transition">
+          <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Correo" class="w-7 h-7" />
+        </a>
+      </div>
+      <p class="text-sm">athleticstore9922@gmail.com</p>
+      <p class="text-gray-500 text-xs mt-2">Respuestas rápidas vía redes o correo</p>
+    </div>
+  </div>
+
+  <!-- Línea inferior -->
+  <div class="border-t border-gold/20 mt-6 py-6 text-center text-xs text-gray-500 bg-black/40">
+    <p>
+      © 2025 <span class="text-gold font-medium">Athletic Store</span> — Todos los derechos reservados.
+    </p>
+    <p class="text-gold font-[Cinzel] mt-1 tracking-[3px]">WEARING WINNERS</p>
+  </div>
+
+  <!-- Sutil iluminación dorada -->
+  <div class="absolute inset-x-0 bottom-0 h-[2px] bg-gradient-to-r from-transparent via-yellow-600/40 to-transparent"></div>
+</footer>
+
+
+        <!-- Librería SweetAlert2 -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+        <!-- Tu script personalizado -->
+        <script src="script.js"></script>
+    </body>
+    </html>
