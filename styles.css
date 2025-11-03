@@ -104,7 +104,6 @@ html {
   cursor: pointer;
 }
 
-/* Efecto hover y toque (mobile/desktop) */
 .product-card:hover,
 .product-card:active {
   transform: translateY(-6px);
@@ -137,20 +136,12 @@ html {
   animation: shine 1.6s linear infinite;
 }
 
-/* Animación del reflejo */
 @keyframes shine {
-  0% {
-    transform: translateX(-100%) rotate(45deg);
-  }
-  50% {
-    transform: translateX(0) rotate(45deg);
-  }
-  100% {
-    transform: translateX(100%) rotate(45deg);
-  }
+  0% { transform: translateX(-100%) rotate(45deg); }
+  50% { transform: translateX(0) rotate(45deg); }
+  100% { transform: translateX(100%) rotate(45deg); }
 }
 
-/* Imagen */
 .product-card img {
   transition: transform 0.6s ease;
 }
@@ -160,7 +151,6 @@ html {
   transform: scale(1.08);
 }
 
-/* Título con brillo dorado suave */
 .product-card h3 {
   position: relative;
   transition: text-shadow 0.5s ease;
@@ -171,7 +161,6 @@ html {
   text-shadow: 0 0 10px rgba(212, 175, 55, 0.6), 0 0 20px rgba(212, 175, 55, 0.4);
 }
 
-/* En mobile: luz sutil permanente */
 @media (max-width: 768px) {
   .product-card {
     box-shadow: 0 0 15px rgba(212, 175, 55, 0.25);
@@ -278,33 +267,19 @@ section + section::before {
   transform: translateX(-50%);
   width: 80%;
   height: 2px;
-  background: linear-gradient(
-    to right,
-    transparent,
-    rgba(212, 175, 55, 0.6),
-    transparent
-  );
+  background: linear-gradient(to right, transparent, rgba(212, 175, 55, 0.6), transparent);
   box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
   border-radius: 50%;
   animation: goldGlow 5s infinite ease-in-out;
 }
 
 @keyframes goldGlow {
-  0% {
-    opacity: 0.7;
-    box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
-  }
-  50% {
-    opacity: 1;
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
-  }
-  100% {
-    opacity: 0.7;
-    box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
-  }
+  0% { opacity: 0.7; box-shadow: 0 0 10px rgba(212, 175, 55, 0.4); }
+  50% { opacity: 1; box-shadow: 0 0 20px rgba(212, 175, 55, 0.6); }
+  100% { opacity: 0.7; box-shadow: 0 0 10px rgba(212, 175, 55, 0.4); }
 }
 
-/* ---------------- DIVISORES PROFESIONALES ENTRE SECCIONES CLAVE ---------------- */
+/* ---------------- DIVISORES PROFESIONALES ---------------- */
 #productos::after,
 #contacto::after {
   content: "";
@@ -328,18 +303,9 @@ section + section::before {
 }
 
 @keyframes goldenFlow {
-  0% {
-    filter: brightness(0.9);
-    box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
-  }
-  50% {
-    filter: brightness(1.2);
-    box-shadow: 0 0 25px rgba(255, 239, 190, 0.6);
-  }
-  100% {
-    filter: brightness(0.9);
-    box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
-  }
+  0% { filter: brightness(0.9); box-shadow: 0 0 10px rgba(212, 175, 55, 0.4); }
+  50% { filter: brightness(1.2); box-shadow: 0 0 25px rgba(255, 239, 190, 0.6); }
+  100% { filter: brightness(0.9); box-shadow: 0 0 10px rgba(212, 175, 55, 0.4); }
 }
 
 @media (max-width: 768px) {
@@ -348,4 +314,67 @@ section + section::before {
     width: 85%;
     top: 60px;
   }
+}
+
+/* -------------------- SCROLL INDICATOR -------------------- */
+.scroll-indicator {
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+}
+
+@keyframes scrollDot {
+  0% { top: 8px; opacity: 1; }
+  50% { top: 28px; opacity: 0.5; }
+  100% { top: 8px; opacity: 1; }
+}
+
+.animate-scroll-dot {
+  animation: scrollDot 1.8s ease-in-out infinite;
+}
+
+/* Indicador de scroll */
+#scroll-ui {
+  opacity: 1;
+  transition: opacity 0.8s ease;
+}
+
+#scroll-ui.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Botón volver arriba */
+#btn-top {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(15px);
+  transition: all 0.6s ease;
+}
+
+#btn-top.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* Animación suave */
+@keyframes bounceSlow {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, -8px); }
+}
+
+.animate-bounce-slow {
+  animation: bounceSlow 3s infinite ease-in-out;
+}
+
+
+#btn-top {
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+}
+
+#btn-top.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
